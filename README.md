@@ -46,3 +46,24 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 
 - ### Execution commands
 > - `./ssh_bruter_extreme ips_to_brute.txt payload.txt`
+
+
+## How compile the sorce code (Normal Version)
+- ### One time commands
+> - Debian based OS: `apt update -y && apt upgrade -y; apt install -y g++ libssh-dev`
+> - Red Hat based OS: `sudo yum -y update && sudo yum -y install gcc-c++ libssh-devel` ***/*** `sudo dnf -y update && sudo dnf -y install gcc-c++ libssh-devel`
+
+### Compilation commands
+> - `g++ ssh_bruter.cpp -o ssh_bruter -lssh -lpthread`
+
+
+## How compile the sorce code (Extreme Version)
+- ### One time commands
+> - Debian based OS: `apt update -y && apt upgrade -y; apt install -y g++ libssh-dev`
+> - Red Hat based OS: `sudo yum -y update && sudo yum -y install gcc-c++ libssh-devel` ***/*** `sudo dnf -y update && sudo dnf -y install gcc-c++ libssh-devel`
+
+### Compilation commands
+> - `g++ ssh_bruter_extreme.cpp -o ssh_bruter_extreme -lssh -lpthread`
+
+
+*Made in Mexico <3*
