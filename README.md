@@ -12,14 +12,37 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 > - Debian or Red Hat linux based OS.
 > - libssh from C++ installed.
 > - An IP addresses list with least 128 IPs.
+> - A .txt file with a payload (can be a random linux command).
+
 
 ## Hardware requeriments
 - ### Minimum
-> - 1 vCore with least 1300 single-thread score
-> - 1 GB Ram
+> - 1 vCore with least 1300 single-thread score.
+> - 1 GB Ram.
 - ### Recommended
-> - 2 vCores with least 1600 single-thread score
-> - 2 GB Ram
-- ### Real experience
-> - 6 vCores with least 3000 single-thread score
-> - 2 GB Ram
+> - 2 vCores with least 1600 single-thread score.
+> - 2 GB Ram.
+- ### Real experience (Only to run the extreme version)
+> - 6 vCores with least 3000 single-thread score.
+> - 4 GB Ram.
+
+
+## Installation & Execution (Normal version)
+- ### One time commands
+> - Debian based OS: `apt install libssh-dev`
+> - Red Hat based OS: `yum install libssh-devel` ***/*** `dnf install libssh-devel`
+> - `chmod +x ./ssh_bruter`
+
+- ### Execution commands
+> - `./ssh_bruter ips_to_brute.txt payload.txt`
+
+
+## Installation & Execution (Extreme version)
+- ### One time commands
+> - Debian based OS: `apt install libssh-dev`
+> - Red Hat based OS: `yum install libssh-devel` ***/*** `dnf install libssh-devel`
+> - `ulimit -n 999999`
+> - `chmod +x ./ssh_bruter_extreme`
+
+- ### Execution commands
+> - `./ssh_bruter_extreme ips_to_brute.txt payload.txt`
