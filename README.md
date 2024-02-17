@@ -22,7 +22,7 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 - ### Recommended
 > - 2 vCores with least 1600 single-thread score.
 > - 2 GB Ram.
-- ### Real experience (Only to run the extreme version)
+- ### Real experience (Only for run the extreme version)
 > - 6 vCores with least 3000 single-thread score.
 > - 4 GB Ram.
 
