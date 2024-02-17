@@ -29,8 +29,9 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 
 ## Installation & Execution (Normal version)
 - ### One time commands
-> - Debian based OS: `apt install libssh-dev`
+> - Debian based OS: `apt install libssh-dev wget`
 > - Red Hat based OS: `yum install libssh-devel` ***/*** `dnf install libssh-devel`
+> - `wget https://github.com/Samuel9221991/Masive-SSH-Bruter-Payload-Loader/releases/download/v1.0/ssh_bruter`
 > - `chmod +x ./ssh_bruter`
 
 - ### Execution commands
@@ -39,8 +40,9 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 
 ## Installation & Execution (Extreme version)
 - ### One time commands
-> - Debian based OS: `apt install libssh-dev`
+> - Debian based OS: `apt install libssh-dev wget`
 > - Red Hat based OS: `yum install libssh-devel` ***/*** `dnf install libssh-devel`
+> - `wget https://github.com/Samuel9221991/Masive-SSH-Bruter-Payload-Loader/releases/download/v1.0/ssh_bruter_extreme`
 > - `ulimit -n 999999`
 > - `chmod +x ./ssh_bruter_extreme`
 
@@ -50,8 +52,9 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 
 ## How compile the sorce code (Normal Version)
 - ### One time commands
-> - Debian based OS: `apt update -y && apt upgrade -y; apt install -y g++ libssh-dev`
+> - Debian based OS: `apt update -y && apt upgrade -y; apt install -y g++ libssh-dev wget`
 > - Red Hat based OS: `sudo yum -y update && sudo yum -y install gcc-c++ libssh-devel` ***/*** `sudo dnf -y update && sudo dnf -y install gcc-c++ libssh-devel`
+> - `wget https://raw.githubusercontent.com/Samuel9221991/Masive-SSH-Bruter-Payload-Loader/main/ssh_bruter.cpp`
 
 ### Compilation commands
 > - `g++ ssh_bruter.cpp -o ssh_bruter -lssh -lpthread`
@@ -59,8 +62,9 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 
 ## How compile the sorce code (Extreme Version)
 - ### One time commands
-> - Debian based OS: `apt update -y && apt upgrade -y; apt install -y g++ libssh-dev`
+> - Debian based OS: `apt update -y && apt upgrade -y; apt install -y g++ libssh-dev wget`
 > - Red Hat based OS: `sudo yum -y update && sudo yum -y install gcc-c++ libssh-devel` ***/*** `sudo dnf -y update && sudo dnf -y install gcc-c++ libssh-devel`
+> - `wget https://raw.githubusercontent.com/Samuel9221991/Masive-SSH-Bruter-Payload-Loader/main/ssh_bruter_extreme.cpp`
 
 ### Compilation commands
 > - `g++ ssh_bruter_extreme.cpp -o ssh_bruter_extreme -lssh -lpthread`
