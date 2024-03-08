@@ -31,7 +31,7 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 - ### One time commands
 > - Debian based OS: `apt install libssh-dev wget`
 > - Red Hat based OS: `yum install libssh-devel` ***/*** `dnf install libssh-devel`
-> - `wget https://github.com/Samuel9221991/Masive-SSH-Bruter-Payload-Loader/releases/download/v1.0/ssh_bruter`
+> - `wget https://github.com/Samuel9221991/Massive-SSH-Bruter-Payload-Loader/releases/download/v1.1/ssh_bruter`
 > - `chmod +x ./ssh_bruter`
 
 - ### Execution commands
@@ -42,7 +42,7 @@ This program brute the ssh from a .txt IP addresses list then, execute a configu
 - ### One time commands
 > - Debian based OS: `apt install libssh-dev wget`
 > - Red Hat based OS: `yum install libssh-devel` ***/*** `dnf install libssh-devel`
-> - `wget https://github.com/Samuel9221991/Masive-SSH-Bruter-Payload-Loader/releases/download/v1.0/ssh_bruter_extreme`
+> - `wget https://github.com/Samuel9221991/Massive-SSH-Bruter-Payload-Loader/releases/download/v1.1/ssh_bruter_extreme`
 > - `ulimit -n 999999`
 > - `chmod +x ./ssh_bruter_extreme`
 
