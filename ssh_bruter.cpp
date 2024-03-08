@@ -200,7 +200,7 @@ void conectarEinfectar(short int hilo, short int usuario)
 
                                 if (respuesta < 0) 
                                 {
-                                    log(2, "Ha ocurrido un error al infectar la máquina.");
+                                    log(2, "An error has been ocurred when trying infect the machine.");
                                 }
                             } 
                             while (respuesta > 0);
@@ -208,13 +208,13 @@ void conectarEinfectar(short int hilo, short int usuario)
 
                         else 
                         {
-                            log(2, "Ha ocurrido un error al infectar la máquina.");
+                            log(2, "An error has been ocurred when trying infect the machine.");
                         }
                     }
 
                     else 
                     {
-                        log(2, "Ha ocurrido un error al infectar la máquina.");
+                        log(2, "An error has been ocurred when trying infect the machine.");
                     }
 
 
